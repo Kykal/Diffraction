@@ -11,6 +11,7 @@ Sito web para calcular de manera rápida y eficiente el resultado de una difracc
 
 ## Herramientas
 - [x] [Mantine](https://mantine.dev/)
+- [x] [React icons](https://react-icons.github.io/react-icons/)
 - [ ] [i18](https://react.i18next.com/)
 
 ## Redes de difracción
