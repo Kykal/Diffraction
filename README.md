@@ -8,10 +8,12 @@ Sito web para calcular de manera rápida y eficiente el resultado de una difracc
 - - -
 
 ## Redes de difracción
-La fórmula general que se estará utilizando en este tema es <span><code>d·sen(&theta;)=&plusmn;m·&lambda;</code></span>, en donde:
+La fórmula general que se estará utilizando en este tema es
+<img  src="https://user-images.githubusercontent.com/54295964/150064662-416ae53b-2228-4ffe-883b-2a0ab802fdf6.png" />
+, en donde:
 |Variable|Descripción|
 |-------|-----------|
-|   d   |Ancho de la rendija.|
+|   a   |Ancho de la rendija.|
 |<span>&theta;</span>|Ángulo de la dirección en la cuál se encuentra el mínimo.|
 |||
 |m|Número del orden máximo|
