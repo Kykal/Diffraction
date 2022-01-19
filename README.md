@@ -5,9 +5,11 @@
 Sito web para calcular de manera rápida y eficiente el resultado de una difracción.
 - - -
 ## Contenido
-1. Redes de difracción
-2. 
+1. [Herramientas](#herramientas)
+1. [Redes de difracción](#redes-de-difraccion)
 - - -
+
+## Herramientas
 
 ## Redes de difracción
 La fórmula general que se estará utilizando en este tema es
