@@ -1,24 +1,17 @@
 import React from 'react';
 
-//Style sheets
-import './App.css';
+import MainPage from './Components/MainPage';
 
 //Mantine hooks
-import { Grid, Text } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
 
 //Component content
 const App = () => {
     
     return (
-        <>
-            <header>
-                <Grid>
-                    <Grid.Col>
-                        <Text align="center" size="xl" >DIFRACCIÓN</Text>
-                    </Grid.Col>
-                </Grid>
-            </header>
-        </>
+        <MantineProvider theme={{ colorScheme: 'dark' }} withGlobalStyles>
+            <MainPage />
+        </MantineProvider>
     );
 };
 
