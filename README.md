@@ -6,7 +6,6 @@ Sito web para calcular de manera rápida y eficiente el resultado de una difracc
 - - -
 ## Contenido
 1. [Dependencias](#dependencias)
-1. [Redes de difracción](#redes-de-difraccion)
 - - -
 
 ## Dependencias
