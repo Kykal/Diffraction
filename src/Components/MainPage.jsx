@@ -1,29 +1,16 @@
 import React, { useState } from 'react';
 
 //MathJax
-import { MathJaxContext, MathJax } from 'better-react-mathjax';
+import MathJax from 'react-mathjax2';
 
 //Mantine
 import { Card, Grid, NumberInput, Title } from '@mantine/core';
 
-const config = {
-   loader: { load: ["[tex]/html"] },
-   tex: {
-     packages: { "[+]": ["html"] },
-     inlineMath: [
-       ["$", "$"],
-       ["\\(", "\\)"]
-     ],
-     displayMath: [
-       ["$$", "$$"],
-       ["\\[", "\\]"]
-     ]
-   }
-};
-
 //Component content
 const MainPage = () => {
 
+   const tex = '\theta';
+   
    const [ difractionAngle, setDifractionAngle ] = useState({
       x: 'x',
       l: 'L',
@@ -54,19 +41,20 @@ const MainPage = () => {
    };
 
    return (
+
       <>
          <header>
             <Card>
                <Grid>
                   <Grid.Col>
                      <Title align="center" order={1} >Red de difracción</Title>
-                     <MathJaxContext version={3} config={config} >
+                     <MathJax.Context input='tex' >
                         <div>
-                           <MathJax hideUntilTypeset={"first"} >
-                              {`\\[a·sen(θ)=\\pm m·λ\\]`}
-                           </MathJax>
+                           <MathJax.Node >
+                              {tex}
+                           </MathJax.Node>
                         </div>
-                     </MathJaxContext>
+                     </MathJax.Context>
                   </Grid.Col>
                </Grid>
             </Card>
@@ -77,13 +65,7 @@ const MainPage = () => {
                <Grid.Col span={10} >
                   <Card>
                      <Title align="center" order={3} >Ángulo de difracción</Title>
-                     <MathJaxContext version={3} config={config} >
-                        <div>
-                           <MathJax hideUntilTypeset={"first"} >
-                              {`\\[${difractionAngle.theta}=tan^{-1}\\left(\\frac{${difractionAngle.x}}{${difractionAngle.l}}\\right)\\]`}
-                           </MathJax>
-                        </div>
-                     </MathJaxContext>
+
                      <Grid>
                         <Grid.Col span={6} >
                            <NumberInput label="Distancia entre los puntos de luz"      variant="filled" icon={"x"} min={0} rightSection="cm."   value={difractionAngle.x} onChange={xVariableHandler} />
