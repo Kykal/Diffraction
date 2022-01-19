@@ -13,7 +13,7 @@ La fórmula general que se estará utilizando en este tema es
   <img height="24" src="https://user-images.githubusercontent.com/54295964/150064845-cd593210-6630-437a-9de0-22b17495b872.png" />  
 </div>
 
-, en donde:
+en donde:
 |Variable|Descripción|
 |-------|-----------|
 |   a   |Ancho de la rendija.|
