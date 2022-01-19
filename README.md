@@ -8,4 +8,4 @@ Sito web para calcular de manera rápida y eficiente el resultado de una difracc
 - - -
 
 ## Redes de difracción
-$$ a $$
+a · sen(Θ) = +-m · λ
