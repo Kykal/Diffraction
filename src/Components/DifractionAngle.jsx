@@ -6,7 +6,7 @@ import { FiX } from 'react-icons/fi';
 
 //Mantine
 import { Button, Card, Grid, NumberInput, Title } from '@mantine/core';
-import {  useNotifications } from '@mantine/notifications';
+import { useNotifications } from '@mantine/notifications';
 
 //MathJax
 import { MathJaxContext, MathJax } from 'better-react-mathjax';
@@ -84,7 +84,7 @@ const DifractionAngle = () => {
             color: 'teal',
             icon: <BsCheck2 />,
             title: '¡Ángulo copiado!',
-            message: 'El valor del ángulo de difracción se ha copiado exitosamente al portapapeles.'
+            message: 'Valor del ángulo de difracción copiado al portapapeles.'
          });
       }else if( difractionValues.x !== 'x' && difractionValues.l === 'L' && difractionValues.theta === 'θ' ){ //If 'L' value has not be assigned
          notif.showNotification({
@@ -100,19 +100,12 @@ const DifractionAngle = () => {
             title: '¡Falta un valor por ingresar!',
             message: 'Falta introducir el valor de "x".'
          });
-      }else if( difractionValues.x !== 'x' && difractionValues.l !== 'L' && difractionValues.theta === 'θ' ){ //If the ange has not be calculated
-         notif.showNotification({
-            color: 'orange',
-            icon: <BsExclamationLg />,
-            title: '¡Aún no has calculado el ángulo!',
-            message: 'Haz clic en el botón "Calcular ángulo de difracción" para después poder copiar su valor resultante.'
-         });
       }else{
          notif.showNotification({
             color: 'red',
             icon: <FiX />,
-            title: '¡Error!',
-            message: 'No es posible copiar al portapapeles porque no se ha introducido ningun valor.'
+            title: '¡Aún no has ingresado valores!',
+            message: 'Por favor, ingrese los valores de "x" y "L".'
          });
       }
    };

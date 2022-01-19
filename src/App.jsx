@@ -3,6 +3,7 @@ import React from 'react';
 //Custom components
 import DifractionAngle from './Components/DifractionAngle';
 import LambdaClearVariable from './Components/LambdaClearVariable';
+import MOrderClearVariable from './Components/MOrderClearVariable';
 
 //MathJax
 import { MathJaxContext, MathJax } from 'better-react-mathjax';
@@ -25,8 +26,6 @@ const config = {
      ]
    }
 };
-
-
 
 //Component content
 const App = () => {
@@ -52,13 +51,14 @@ const App = () => {
                 <br />
                 <main>
                     <Grid justify="center" >
-                        <Grid.Col span={10} >
+                        <Grid.Col xs={10} md={10} >
                             <DifractionAngle />
                         </Grid.Col>
                         <Grid.Col xs={10} md={5} >
                             <LambdaClearVariable />
                         </Grid.Col>
                         <Grid.Col xs={10} md={5} >
+                            <MOrderClearVariable />
                         </Grid.Col>
                     </Grid>
                 </main>
