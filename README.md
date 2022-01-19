@@ -2,13 +2,13 @@
 
 # Diffraction
 
-Sito web para calcular de manera rápida y eficiente el resultado de una difracción.
+Web site to calculate the angle of diffraction and some variables that make up the formula. 
 - - -
 ## Contenido
-1. [Dependencias](#dependencias)
+1. [Dependencies](#dependencies)
 - - -
 
-## Dependencias
+## Dependencies
 - [Mantine](https://mantine.dev/)
 - [React icons](https://react-icons.github.io/react-icons/)
 - [i18](https://react.i18next.com/)
