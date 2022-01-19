@@ -10,6 +10,8 @@ Sito web para calcular de manera rápida y eficiente el resultado de una difracc
 - - -
 
 ## Herramientas
+- [x] [Mantine](https://mantine.dev/)
+- [ ] [i18](https://react.i18next.com/)
 
 ## Redes de difracción
 La fórmula general que se estará utilizando en este tema es
