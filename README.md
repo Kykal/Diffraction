@@ -5,6 +5,8 @@
 Sito web para calcular de manera rápida y eficiente el resultado de una difracción.
 - - -
 ## Contenido
+1. Redes de difracción
+2. 
 - - -
 
 ## Redes de difracción
