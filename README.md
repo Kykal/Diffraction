@@ -3,3 +3,9 @@
 # Difracción
 
 Sito web para calcular de manera rápida y eficiente el resultado de una difracción.
+- - -
+## Contenido
+- - -
+
+## Redes de difracción
+$$ a $$
