@@ -18,5 +18,5 @@ en donde:
 |-------|-----------|
 |   a   |Ancho de la rendija.|
 |<span>&theta;</span>|Ángulo de la dirección en la cuál se encuentra el mínimo.|
-|m|Número del orden máximo|
-|<span>&lambda;</span>|Longitud de onda de la luz|
+|m|Número del orden máximo.|
+|<span>&lambda;</span>|Longitud de onda de la luz.|
