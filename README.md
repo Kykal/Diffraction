@@ -8,4 +8,4 @@ Sito web para calcular de manera rápida y eficiente el resultado de una difracc
 - - -
 
 ## Redes de difracción
-<span>d·sen(\theta)=\plusmnm·\lambda</span>
+<span>d·sen(&theta;)=&plusmn;m·&lambda;</span>
