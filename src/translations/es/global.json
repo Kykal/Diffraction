@@ -1,0 +1,65 @@
+{
+   "header": {
+      "title": "Red de difracción"
+   },
+   "copy-button": "Copiar",
+   "difraction-angle": {
+      "title": "Ángulo de difracción",
+      "x-label": "Distancia entre los puntos del láser",
+      "l-label": "Distancia entre la rendija y la pared",
+      "notification": {
+         "success": {
+            "title": "¡Ángulo copiado!",
+            "message": "Valor del ángulo de difracción copiado al portapapeles."
+         },
+         "warning": {
+            "title": "¡Falta un valor por ingresar!",
+            "message": "Por favor, ingrese los valores de 'x' y 'L'."
+         },
+         "error": {
+            "title": "¡Aún no has ingresado valores!",
+            "message": "Por favor, ingrese los valores de 'x' y 'L'"
+         }
+      }
+   },
+   "clear": {
+      "title-lambda": "Despejar λ",
+      "title-m": "Despejar m",
+      "mathjax": {
+         "lines": "líneas",
+         "micrometer": "micrómetro"
+      },
+      "d-label": "Líneas por micrómetro",
+      "theta-label": "Ángulo de difracción",
+      "m-label": "Orden del mínimo",
+      "lambda-label": "Frecuencia de onda",
+      "notification-lambda": {
+         "success": {
+            "title": "¡Copiado con éxito!",
+            "message": "Valor de 'λ' copiado al portapapeles."
+         },
+         "warning": {
+            "title": "¡Faltan valores por ingresar!",
+            "message": "Favor de ingresar los valores restantes."
+         },
+         "error": {
+            "title": "¡Aún no has ingresado valores!",
+            "message": "Por favor, ingrese los valores de 'd', 'θ' y 'm'."
+         }
+      },
+      "notification-m": {
+         "success": {
+            "title": "¡Copiado con éxito!",
+            "message": "Valor de 'm' copiado al portapapeles.'"
+         },
+         "warning": {
+            "title": "¡Faltan valores por ingresar!",
+            "message": "Favor de ingresar los valores restantes."
+         },
+         "error": {
+            "title": "¡Aún no has ingresado valores!",
+            "message": "Por favor, ingrese los valores de 'd', 'θ' y 'λ'."
+         }
+      }
+   }
+}

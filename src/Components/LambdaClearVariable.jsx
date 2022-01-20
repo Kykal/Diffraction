@@ -11,6 +11,9 @@ import { useNotifications } from '@mantine/notifications';
 //MathJax
 import { MathJaxContext, MathJax } from 'better-react-mathjax';
 
+//i18next
+import { useTranslation } from 'react-i18next';
+
 //MathJaxConfig
 const config = {
    loader: { load: ["[tex]/html"] },
@@ -28,11 +31,14 @@ const config = {
 };
 
 const LineasMicrometro = () => {
+
+   const { t } = useTranslation("global"); //'t' to access languages
+
    return(
        <MathJaxContext version={3} config={config} >
            <div className='lm' >
-               <MathJax hideUntilTypeset={"first"} >
-                   {`\\(\\frac{lineas}{micrómetro}\\)`}
+               <MathJax hideUntilTypeset={"first"} dynamic >
+                   {`\\(\\frac{${t('clear.mathjax.lines')}}{${t('clear.mathjax.micrometer')}}\\)`}
                </MathJax>
            </div>
        </MathJaxContext>
@@ -42,6 +48,9 @@ const LineasMicrometro = () => {
 //Component content
 const LambdaClearVariable = () => {
    
+   //i18next
+   const { t } = useTranslation("global"); //'t' to access languages
+
    //For notification hooks
    const notif = useNotifications();
 
@@ -67,23 +76,23 @@ const LambdaClearVariable = () => {
          notif.showNotification({
             color: 'red',
             icon: <FiX />,
-            title: '¡Aún no has ingresado valores!',
-            message: 'Por favor, ingrese los valores de "d", "θ" y "m".'
+            title: `${t('clear.notification-lambda.error.title')}`,
+            message: `${t('clear.notification-lambda.error.message')}`
          });
       }else if( clearVariableLambda.d !== 'd' && clearVariableLambda.theta !== 'θ' && clearVariableLambda.m !== 'm' ){ //If all variables have a value...
          navigator.clipboard.writeText(clearVariableLambda.lambda);
          notif.showNotification({
             color: 'teal',
             icon: <BsCheck2 />,
-            title: '¡Copiado con éxito!',
-            message: 'Valor de "λ" copiado al portapapeles.'
+            title: `${t('clear.notification-lambda.success.title')}`,
+            message: `${t('clear.notification-lambda.success.message')}`
          });
       }else if( clearVariableLambda.d !== 'd' || clearVariableLambda.theta !== 'θ' || clearVariableLambda.m !== 'm' ){ //If there's a variable that have not a value
          notif.showNotification({
             color: 'orange',
             icon: <BsExclamationLg />,
-            title: '¡Faltan valores por ingresar!',
-            message: 'Favor de ingresar los valores restantes.'
+            title: `${t('clear.notification-lambda.warning.title')}`,
+            message: `${t('clear.notification-lambda.warning.message')}`
          });
       }
    };
@@ -117,7 +126,7 @@ const LambdaClearVariable = () => {
 
    return (
       <Card>
-         <Title align='center' order={3}>Despejar &lambda;</Title>
+         <Title align='center' order={3}>{t('clear.title-lambda')}</Title>
          <MathJaxContext version={3} config={config} >
             <div>
                <MathJax hideUntilTypeset={"first"} dynamic >
@@ -127,16 +136,16 @@ const LambdaClearVariable = () => {
          </MathJaxContext>
          <Grid>
             <Grid.Col md={12} lg={4} >
-               <NumberInput label="Líneas por micrómetro" variant="filled" icon="d" rightSection={<LineasMicrometro />} hideControls value={clearVariableLambda.d} onChange={dHandler} />
+               <NumberInput label={t('clear.d-label')} variant="filled" icon="d" rightSection={<LineasMicrometro />} hideControls value={clearVariableLambda.d} onChange={dHandler} />
             </Grid.Col>
             <Grid.Col md={12} lg={4} >
-               <NumberInput label="Ángulo de difracción" variant="filled" icon="θ" rightSection="º" hideControls value={clearVariableLambda.theta} onChange={thetaHandler} />
+               <NumberInput label={t('clear.theta-label')} variant="filled" icon="θ" rightSection="º" hideControls value={clearVariableLambda.theta} onChange={thetaHandler} />
             </Grid.Col>
             <Grid.Col md={12} lg={4} >
-               <NumberInput label="Orden del mínimo" variant="filled" icon="m" hideControls value={clearVariableLambda.m} onChange={mHandler} />
+               <NumberInput label={t('clear.m-label')} variant="filled" icon="m" hideControls value={clearVariableLambda.m} onChange={mHandler} />
             </Grid.Col>
             <Grid.Col span={12} >
-               <Button fullWidth variant="filled" color="gray" size="md" onClick={copyThetaHandler} >Copiar</Button>
+               <Button fullWidth variant="filled" color="gray" size="md" onClick={copyThetaHandler} >{t('copy-button')}</Button>
             </Grid.Col>
          </Grid>
       </Card>

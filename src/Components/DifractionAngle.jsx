@@ -11,6 +11,9 @@ import { useNotifications } from '@mantine/notifications';
 //MathJax
 import { MathJaxContext, MathJax } from 'better-react-mathjax';
 
+//i18next
+import { useTranslation } from 'react-i18next';
+
 //MathJaxConfig
 const config = {
    loader: { load: ["[tex]/html"] },
@@ -30,6 +33,9 @@ const config = {
 //Component content
 const DifractionAngle = () => {
    
+   //i18next
+   const { t } = useTranslation("global"); //'t' to access languages
+
    //For notification hooks
    const notif = useNotifications();
 
@@ -83,36 +89,29 @@ const DifractionAngle = () => {
          notif.showNotification({
             color: 'teal',
             icon: <BsCheck2 />,
-            title: '¡Ángulo copiado!',
-            message: 'Valor del ángulo de difracción copiado al portapapeles.'
+            title: `${t('difraction-angle.notification.success.title')}`,
+            message: `${t('difraction-angle.notification.success.message')}`
          });
-      }else if( difractionValues.x !== 'x' && difractionValues.l === 'L' && difractionValues.theta === 'θ' ){ //If 'L' value has not be assigned
+      }else if( (difractionValues.x !== 'x' || difractionValues.l !== 'L') && difractionValues.theta === 'θ' ){ //If 'L' value has not be assigned
          notif.showNotification({
             color: 'orange',
             icon: <BsExclamationLg />,
-            title: '¡Falta un valor por ingresar!',
-            message: 'Falta introducir el valor de "L".'
-         });
-      }else if( difractionValues.x === 'x' && difractionValues.l !== 'L' && difractionValues.theta === 'θ' ){ //If 'x' value has not be assigned
-         notif.showNotification({
-            color: 'orange',
-            icon: <BsExclamationLg />,
-            title: '¡Falta un valor por ingresar!',
-            message: 'Falta introducir el valor de "x".'
+            title: `${t('difraction-angle.notification.warning.title')}`,
+            message: `${t('difraction-angle.notification.warning.message')}`
          });
       }else{
          notif.showNotification({
             color: 'red',
             icon: <FiX />,
-            title: '¡Aún no has ingresado valores!',
-            message: 'Por favor, ingrese los valores de "x" y "L".'
+            title: `${t('difraction-angle.notification.error.title')}`,
+            message: `${t('difraction-angle.notification.error.message')}`
          });
       }
    };
 
    return (
       <Card>
-         <Title align="center" order={3} >Ángulo de difracción</Title>
+         <Title align="center" order={3} >{t('difraction-angle.title')}</Title>
          <MathJaxContext version={3} config={config} >
             <div>
             <MathJax hideUntilTypeset={"first"} dynamic >
@@ -122,13 +121,13 @@ const DifractionAngle = () => {
          </MathJaxContext>
          <Grid align="flex-end">
             <Grid.Col md={12} lg={5} >
-               <NumberInput label="Distancia entre los puntos del láser"   variant="filled" icon="x" min={0} rightSection="cm." value={difractionValues.x} onChange={xValueHandler} />
+               <NumberInput label={t('difraction-angle.x-label')}   variant="filled" icon="x" min={0} rightSection="cm." value={difractionValues.x} onChange={xValueHandler} />
             </Grid.Col>
             <Grid.Col md={12} lg={5} >
-               <NumberInput label="Distancia entre la rendija y la pared"  variant="filled" icon="L" min={0} rightSection="m."  value={difractionValues.l} onChange={lValueHandler} />
+               <NumberInput label={t('difraction-angle.l-label')}  variant="filled" icon="L" min={0} rightSection="m."  value={difractionValues.l} onChange={lValueHandler} />
             </Grid.Col>
             <Grid.Col md={12} lg={2} >
-               <Button fullWidth  variant="filled" color="gray" size="md" onClick={copyDifractionAngleHandler} >Copiar</Button>
+               <Button fullWidth  variant="filled" color="gray" size="md" onClick={copyDifractionAngleHandler} >{t('copy-button')}</Button>
             </Grid.Col>
          </Grid>
       </Card>

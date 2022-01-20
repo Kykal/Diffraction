@@ -11,6 +11,9 @@ import { useNotifications } from '@mantine/notifications';
 //MathJax
 import { MathJaxContext, MathJax } from 'better-react-mathjax';
 
+//i18next
+import { useTranslation } from 'react-i18next';
+
 //MathJaxConfig
 const config = {
    loader: { load: ["[tex]/html"] },
@@ -28,11 +31,14 @@ const config = {
 };
 
 const LineasMicrometro = () => {
+
+   const { t } = useTranslation("global"); //'t' to access languages
+
    return(
        <MathJaxContext version={3} config={config} >
            <div className='lm' >
-               <MathJax hideUntilTypeset={"first"} >
-                   {`\\(\\frac{lineas}{micrómetro}\\)`}
+               <MathJax hideUntilTypeset={"first"} dynamic >
+                   {`\\(\\frac{${t('clear.mathjax.lines')}}{${t('clear.mathjax.micrometer')}}\\)`}
                </MathJax>
            </div>
        </MathJaxContext>
@@ -42,6 +48,10 @@ const LineasMicrometro = () => {
 //Component content
 const MOrderClearVariable = () => {
    
+   //i18next
+   const { t } = useTranslation("global"); //'t' to access languages
+
+   //For notification hooks
    const notif = useNotifications();
 
    const [ variables, setVariables ] = useState({
@@ -66,23 +76,23 @@ const MOrderClearVariable = () => {
          notif.showNotification({
             color: 'red',
             icon: <FiX />,
-            title: '¡Aún no has ingresado valores!',
-            message: 'Por favor, ingrese los valores de "d", "θ" y "λ".'
+            title: `${t('clear.notification-m.error.title')}`,
+            message: `${t('clear.notification-m.error.message')}`
          });
       }else if( variables.d !== 'd' && variables.theta !== 'θ' && variables.lambda !== 'λ' ){
          navigator.clipboard.writeText(variables.m)
          notif.showNotification({
             color: 'teal',
             icon: <BsCheck2 />,
-            title: '¡Copiado con éxito!',
-            message: 'Valor de "m" copiado al portapapeles.'
+            title: `${t('clear.notification-m.success.title')}`,
+            message: `${t('clear.notification-m.success.message')}`
          });
       }else{
          notif.showNotification({
             color: 'orange',
             icon: <BsExclamationLg />,
-            title: '¡Faltan valores por ingresar!',
-            message: 'Favor de ingresar los valores restantes.'
+            title: `${t('clear.notification-m.warning.title')}`,
+            message: `${t('clear.notification-m.warning.message')}`
          });
       }
    };
@@ -116,7 +126,7 @@ const MOrderClearVariable = () => {
 
    return (
       <Card>
-         <Title align="center" order={3} >Despejar m</Title>
+         <Title align="center" order={3} >{t('clear.title-m')}</Title>
          <MathJaxContext version={3} config={config} >
             <div>
                <MathJax hideUntilTypeset={"first"} dynamic >
@@ -126,16 +136,16 @@ const MOrderClearVariable = () => {
          </MathJaxContext>
          <Grid>
             <Grid.Col md={12} lg={4} >
-               <NumberInput label="Líneas por micrómetro" icon="d" rightSection={<LineasMicrometro />} value={variables.d} onChange={dHandler} hideControls />
+               <NumberInput label={t('clear.d-label')} icon="d" rightSection={<LineasMicrometro />} value={variables.d} onChange={dHandler} hideControls />
             </Grid.Col>
             <Grid.Col md={12} lg={4} >
-               <NumberInput label="Ángulo de difracción" icon="θ" rightSection="º" value={variables.theta} onChange={thetaHandler} hideControls />
+               <NumberInput label={t('clear.theta-label')} icon="θ" rightSection="º" value={variables.theta} onChange={thetaHandler} hideControls />
             </Grid.Col>
             <Grid.Col md={12} lg={4} >
-               <NumberInput label="Frecuencia de onda" icon="λ" rightSection="Hz" value={variables.lambda} onChange={lambdaHandler} hideControls />
+               <NumberInput label={t('clear.lambda-label')} icon="λ" rightSection="Hz" value={variables.lambda} onChange={lambdaHandler} hideControls />
             </Grid.Col>
             <Grid.Col span={12} >
-               <Button fullWidth variant="filled" color="gray" size="md" onClick={copyHandler} >Copiar</Button>
+               <Button fullWidth variant="filled" color="gray" size="md" onClick={copyHandler} >{t('copy-button')}</Button>
             </Grid.Col>
          </Grid>
       </Card>
