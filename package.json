@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kykal.github.io/Diffraction/",
+  "homepage": "http://kykal.github.io/Diffraction/",
   "dependencies": {
     "@mantine/core": "^3.6.1",
     "@mantine/hooks": "^3.6.1",
