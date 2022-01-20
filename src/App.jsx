@@ -29,13 +29,14 @@ const config = {
 
 //Component content
 const App = () => {
+
     return (
         <MantineProvider theme={{ colorScheme: 'dark' }} withGlobalStyles>
             <NotificationsProvider>
                 <header>
                     <Card>
                         <Grid>
-                            <Grid.Col>
+                            <Grid.Col span={12} >
                                 <Title align="center" order={1} >Red de difracción</Title>
                                 <MathJaxContext version={3} config={config} >
                                     <div className='lm' >
@@ -44,6 +45,12 @@ const App = () => {
                                     </MathJax>
                                     </div>
                                 </MathJaxContext>
+                            </Grid.Col>
+                            <Grid.Col span={6} >
+                                
+                            </Grid.Col>
+                            <Grid.Col span={6} >
+                                
                             </Grid.Col>
                         </Grid>
                     </Card>
