@@ -6,6 +6,7 @@ Web site to calculate the angle of diffraction and some variables that make up t
 - - -
 ## Content
 1. [Dependencies](#dependencies)
+2. [To fix](#to-fix)
 - - -
 
 ## Dependencies
