@@ -76,7 +76,7 @@ const LambdaClearVariable = () => {
             color: 'teal',
             icon: <BsCheck2 />,
             title: '¡Copiado con éxito!',
-            message: 'Valor de "θ" copiado al portapapeles.'
+            message: 'Valor de "λ" copiado al portapapeles.'
          });
       }else if( clearVariableLambda.d !== 'd' || clearVariableLambda.theta !== 'θ' || clearVariableLambda.m !== 'm' ){ //If there's a variable that have not a value
          notif.showNotification({
