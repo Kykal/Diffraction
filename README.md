@@ -2,7 +2,9 @@
 
 # Diffraction
 
-Web site to calculate the angle of diffraction and some variables that make up the formula. 
+Web site to calculate the angle of diffraction and some variables that make up the formula.
+
+You can visit the website [clicking here](https://kykal.github.io/Diffraction/)
 - - -
 ## Content
 1. [Dependencies](#dependencies)
