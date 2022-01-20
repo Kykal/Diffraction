@@ -12,3 +12,6 @@ Web site to calculate the angle of diffraction and some variables that make up t
 - [Mantine](https://mantine.dev/)
 - [React icons](https://react-icons.github.io/react-icons/)
 - [i18](https://react.i18next.com/)
+
+## To fix
+- [ ] NumberInput rightSectionWidth need to be the right width for the unit.
