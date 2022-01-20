@@ -4,7 +4,7 @@
 
 Web site to calculate the angle of diffraction and some variables that make up the formula. 
 - - -
-## Contenido
+## Content
 1. [Dependencies](#dependencies)
 - - -
 
