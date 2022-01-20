@@ -1,0 +1,65 @@
+{
+   "header": {
+      "title": "Diffraction grating"
+   },
+   "copy-button": "Copy",
+   "difraction-angle": {
+      "title": "Diffraction angle",
+      "x-label": "Distance between laser dots",
+      "l-label": "Distance between the crack and the wall",
+      "notification": {
+         "success": {
+            "title": "Angle copied!",
+            "message": "The diffraction angle value has been copied to clipboard."
+         },
+         "warning": {
+            "title": "There is a missing value!",
+            "message": "Please, enter the values of 'x' and 'L'."
+         },
+         "error": {
+            "title": "You have not entered values yet!",
+            "message": "Please, enter the values of 'x' and 'L'."
+         }
+      }
+   },
+   "clear": {
+      "title-lambda": "Clear λ",
+      "title-m": "Clear m",
+      "mathjax": {
+         "lines": "lines",
+         "micrometer": "micrometer"
+      },
+      "d-label": "Lines per micrometer",
+      "theta-label": "Diffraction angle",
+      "m-label": "Minimum order",
+      "lambda-label": "Wave frecuency",
+      "notification-lambda": {
+         "success": {
+            "title": "Copied!",
+            "message": "'λ' value copied to clipboard."
+         },
+         "warning": {
+            "title": "There are missing values!",
+            "message": "Please, enter the missing values."
+         },
+         "error": {
+            "title": "You have not entered values yet!",
+            "message": "Please, enter the values of 'd', 'θ' and 'm'"
+         }
+      },
+      "notification-m": {
+         "success": {
+            "title": "Copied!",
+            "message": "'m' value copied to clipboard."
+         },
+         "warning": {
+            "title": "There are missing values!",
+            "message": "Please, enter the missing values."
+         },
+         "error": {
+            "title": "You have not entered values yet!",
+            "message": "Please, enter the values of 'd', 'θ' and 'λ'"
+         }
+      }
+   }
+}

@@ -8,9 +8,13 @@ You can visit the website [clicking here](https://kykal.github.io/Diffraction/).
 - - -
 ## Content
 1. [Dependencies](#dependencies)
+2. [To fix](#to-fix)
 - - -
 
 ## Dependencies
 - [Mantine](https://mantine.dev/)
 - [React icons](https://react-icons.github.io/react-icons/)
 - [i18](https://react.i18next.com/)
+
+## To fix
+- [ ] NumberInput rightSectionWidth need to be the right width for the unit.
