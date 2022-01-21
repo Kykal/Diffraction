@@ -20,14 +20,14 @@ This web site was made using [React](https://reactjs.org/) library as core devel
 
 ## To-do
 - [ ] `rightSectionWidth` attribute from `<NumberInput />` Mantine component must be fixed to fit the "lines/micrometer" unit.
-```react
+```jsx
 src/Components/LambdaClearVariable.jsx
 
   1 import React, { useState, useEffect } from 'react';
   # ...
 139 <NumberInput ... />
 ```
-```react
+```jsx
 src/Components/MOrderClearVariable.jsx
 
   1 import React, { useState, useEffect } from 'react';
