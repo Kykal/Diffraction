@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Diffraction/static/css/main.9bd62555.css",
-    "main.js": "/Diffraction/static/js/main.9cae5da3.js",
+    "main.js": "/Diffraction/static/js/main.51e25f62.js",
     "static/js/787.c39012cf.chunk.js": "/Diffraction/static/js/787.c39012cf.chunk.js",
     "index.html": "/Diffraction/index.html",
     "main.9bd62555.css.map": "/Diffraction/static/css/main.9bd62555.css.map",
-    "main.9cae5da3.js.map": "/Diffraction/static/js/main.9cae5da3.js.map",
+    "main.51e25f62.js.map": "/Diffraction/static/js/main.51e25f62.js.map",
     "787.c39012cf.chunk.js.map": "/Diffraction/static/js/787.c39012cf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9bd62555.css",
-    "static/js/main.9cae5da3.js"
+    "static/js/main.51e25f62.js"
   ]
 }
