@@ -25,7 +25,12 @@ src/Components/LambdaClearVariable.jsx
 
   1 import React, { useState, useEffect } from 'react';
   # ...
- 49 const LambdaClearVariable = () => {
- ## ...
+139 <NumberInput ... />
+```
+```react
+src/Components/MOrderClearVariable.jsx
+
+  1 import React, { useState, useEffect } from 'react';
+  # ...
 139 <NumberInput ... />
 ```
