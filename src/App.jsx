@@ -11,8 +11,11 @@ import { MathJaxContext, MathJax } from 'better-react-mathjax';
 //i18next
 import { useTranslation } from 'react-i18next';
 
+//Flags
+import Flag from 'react-world-flags';
+
 //Mantine
-import { Card, Grid, Select, Title, MantineProvider } from '@mantine/core';
+import { Card, Center, Grid, SegmentedControl, Title, MantineProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 
 //MathJax configuration
@@ -52,17 +55,34 @@ const App = () => {
                                     </div>
                                 </MathJaxContext>
                             </Grid.Col>
-                            <Grid.Col sx={6} md={3} lg={2} xl={1} >
-                                <Select
-                                    defaultValue='en'
-                                    data = {[
-                                        { value: 'en', label: 'English' },
-                                        { value: 'es', label: 'Español' }
-                                    ]}
-                                    onChange={(value) => {
-                                        i18n.changeLanguage(value);
-                                    }}
-                                />
+                            <Grid.Col sx={3} xl={2} >
+                                <Center>
+                                    <SegmentedControl
+                                        defaultValue='en'
+                                        data = {[
+                                            { value: 'en', label: (
+                                                <Center>
+                                                    <Flag code="gbr" height="11" />
+                                                    <div style={{marginLeft:10}} >
+                                                        English
+                                                    </div>
+                                                </Center>
+                                                )
+                                            },
+                                            { value: 'es', label: (
+                                                <Center>
+                                                    <Flag code="mex" height="12" />
+                                                    <div style={{marginLeft:10}} >
+                                                        Español
+                                                    </div>
+                                                </Center>
+                                                ) }
+                                        ]}
+                                        onChange={(value) => {
+                                            i18n.changeLanguage(value);
+                                        }}
+                                    />
+                                </Center>
                             </Grid.Col>
                         </Grid>
                     </Card>
