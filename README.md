@@ -19,7 +19,7 @@ This web site was made using [React](https://reactjs.org/) library as core devel
 - [react-world-flags](https://www.npmjs.com/package/react-world-flags)
 
 ## To-do
-- [ ] `rightSectionWidth` attribute from `<NumberInput />` Mantine component must be fixed to fit the lines/micrometer unit.
+- [ ] `rightSectionWidth` attribute from `<NumberInput />` Mantine component must be fixed to fit the "lines/micrometer" unit.
 ```react
 src/Components/LambdaClearVariable.jsx
 
