@@ -27,5 +27,5 @@ src/Components/LambdaClearVariable.jsx
   # ...
  49 const LambdaClearVariable = () => {
  ## ...
-139 <NumberInput label={t('clear.d-label')} variant="filled" icon="d" rightSection={<LineasMicrometro />} hideControls value={clearVariableLambda.d} onChange={dHandler} />
+139 <NumberInput ... />
 ```
