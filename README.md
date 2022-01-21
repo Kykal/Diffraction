@@ -5,7 +5,7 @@
 
 # Diffraction
 Web site to calculate the angle of diffraction and some variables that make up the formula. You can visit the website [clicking here](https://kykal.github.io/Diffraction/).
-This website was made using [React](https://reactjs.org/) library as core development; [Mantine](https://mantine.dev/) for user-interface components and themes; [i18next](https://www.i18next.com/) was used to make the web site multi-language possible.
+This web site was made using [React](https://reactjs.org/) library as core development; [Mantine](https://mantine.dev/) for user-interface components and themes; [i18next](https://www.i18next.com/) was used to make the web site multi-language possible.
 - - -
 ## Content
 1. [Dependencies](#dependencies)
