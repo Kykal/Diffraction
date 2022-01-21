@@ -1,5 +1,5 @@
 [![React](https://img.shields.io/badge/17.0.2-60DAFB?style=for-the-badge&logo=react&label=React&labelColor=1F232A)]()
-<img height="24" src="https://user-images.githubusercontent.com/54295964/150493307-51c520f8-88ef-4282-9de0-6e8ebbf014c6.png" />
+<img height="32" src="https://user-images.githubusercontent.com/54295964/150493307-51c520f8-88ef-4282-9de0-6e8ebbf014c6.png" />
 
 
 # Diffraction
