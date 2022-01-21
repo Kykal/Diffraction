@@ -12,7 +12,7 @@ import { MathJaxContext, MathJax } from 'better-react-mathjax';
 import { useTranslation } from 'react-i18next';
 
 //Mantine
-import { Card, Grid, Select, Title, MantineProvider } from '@mantine/core';
+import { Card, Center, Grid, SegmentedControl, Title, MantineProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 
 //MathJax configuration
@@ -53,7 +53,7 @@ const App = () => {
                                 </MathJaxContext>
                             </Grid.Col>
                             <Grid.Col sx={6} md={3} lg={2} xl={1} >
-                                <Select
+                                <SegmentedControl
                                     defaultValue='en'
                                     data = {[
                                         { value: 'en', label: 'English' },
