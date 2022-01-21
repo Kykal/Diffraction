@@ -9,28 +9,11 @@ This web site was made using [React](https://reactjs.org/) library as core devel
 - - -
 ## Content
 1. [Dependencies](#dependencies)
-2. [To fix](#to-fix)
 - - -
 
 ## Dependencies
 - [Mantine](https://mantine.dev/)
+- [better-react-mathjax](https://www.npmjs.com/package/better-react-mathjax)
 - [React icons](https://react-icons.github.io/react-icons/)
 - [i18next](https://react.i18next.com/)
 - [react-world-flags](https://www.npmjs.com/package/react-world-flags)
-
-## To-do
-- [ ] `rightSectionWidth` attribute from `<NumberInput />` Mantine component must be fixed to fit the "lines/micrometer" unit.
-```jsx
-src/Components/LambdaClearVariable.jsx
-
-  1 import React, { useState, useEffect } from 'react';
-  # ...
-139 <NumberInput ... />
-```
-```jsx
-src/Components/MOrderClearVariable.jsx
-
-  1 import React, { useState, useEffect } from 'react';
-  # ...
-139 <NumberInput ... />
-```
