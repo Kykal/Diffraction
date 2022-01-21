@@ -4,7 +4,8 @@
 [<img title="i18next" height="28" src="https://user-images.githubusercontent.com/54295964/150494845-89081d96-dea8-4db9-8e98-9a21e21074aa.png" >](https://www.i18next.com/)
 
 # Diffraction
-Web site to calculate the angle of diffraction and some variables that make up the formula. You can visit the website [clicking here](https://kykal.github.io/Diffraction/). This website was made using [React](https://reactjs.org/) library as core development; [Mantine](https://mantine.dev/) for user-interface components and themes; [i18next](https://www.i18next.com/) was used to make the web site multi-language possible.
+Web site to calculate the angle of diffraction and some variables that make up the formula. You can visit the website [clicking here](https://kykal.github.io/Diffraction/).
+This website was made using [React](https://reactjs.org/) library as core development; [Mantine](https://mantine.dev/) for user-interface components and themes; [i18next](https://www.i18next.com/) was used to make the web site multi-language possible.
 - - -
 ## Content
 1. [Dependencies](#dependencies)
