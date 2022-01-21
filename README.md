@@ -2,7 +2,8 @@
 <a href="https://react-icons.github.io/react-icons" >
   <img height="28" title="react-icons" src="https://user-images.githubusercontent.com/54295964/150493307-51c520f8-88ef-4282-9de0-6e8ebbf014c6.png" />
 <a/>
-[<img align="left" alt="Mantine" height="45" src="https://user-images.githubusercontent.com/54295964/149887770-4a30e3fa-2bd2-46a3-adb3-e5a9546c96f2.png" >](https://mantine.dev/)
+[<img height="28" title="react-icons" src="https://user-images.githubusercontent.com/54295964/150493307-51c520f8-88ef-4282-9de0-6e8ebbf014c6.png" />](https://react-icons.github.io/react-icons)
+[<img alt="Mantine" height="45" src="https://user-images.githubusercontent.com/54295964/149887770-4a30e3fa-2bd2-46a3-adb3-e5a9546c96f2.png" >](https://mantine.dev/)
 
 
 # Diffraction
