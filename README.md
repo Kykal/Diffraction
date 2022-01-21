@@ -15,8 +15,17 @@ This web site was made using [React](https://reactjs.org/) library as core devel
 ## Dependencies
 - [Mantine](https://mantine.dev/)
 - [React icons](https://react-icons.github.io/react-icons/)
-- [i18](https://react.i18next.com/)
+- [i18next](https://react.i18next.com/)
 - [react-world-flags](https://www.npmjs.com/package/react-world-flags)
 
-## To fix
-- [ ] NumberInput rightSectionWidth need to be the right width for the unit.
+## To-do
+- [ ] `rightSectionWidth` attribute from `<NumberInput />` Mantine component must be fixed to fit the lines/micrometer unit.
+```react
+src/Components/LambdaClearVariable.jsx
+
+  1 import React, { useState, useEffect } from 'react';
+  # ...
+ 49 const LambdaClearVariable = () => {
+ ## ...
+139 <NumberInput label={t('clear.d-label')} variant="filled" icon="d" rightSection={<LineasMicrometro />} hideControls value={clearVariableLambda.d} onChange={dHandler} />
+```
